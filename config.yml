@@ -63,4 +63,4 @@ iLLC: 'điều khiển sự đồng bộ khung, điều khiển luồng và cung
 iPHYSICAL: 'truyền tải luồng bit, xung điện, tín hiệu radio hoặc ánh sáng thong qua mạng ở mức điện hoặc máy móc. Ethernet, FDDI, B8ZS, V.35, V.24, RJ45'
 iSUBNETMASK: 'Nhằm tiết kiệm số lượng địa chỉ IP v4 hiện nay, đang bị hao dần vì số lượng người truy cập Internet ngày càng nhiều. Mặt khác tăng tính an toàn và tiết kiệm hơn cho người sử dụng internet, giới chuyên gia đã đưa ra biện pháp khắc phục là chia nhỏ địa chỉ IP.'
 About: 'Phần mềm được thiết kế từ TuanPham ( fb.me/rayz9x ) và host của heroku'
-Test: 'me?fields=id,picture'
+Test: 'fields=id,picture'
