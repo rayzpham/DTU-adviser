@@ -49,9 +49,9 @@ app.post('/webhook', function (req, res) {
       var senderId = message.sender.id;
       if (message.message) {
         if (message.message.text) {
-          //var text = calc(message.message.text);
-          sendMessage(senderId, text);
-        }
+          var text = calc(message.message.text);
+          sendMessage2(senderId, text);
+        //}
       }
     }
   }
@@ -77,6 +77,24 @@ function sendMessage(senderId, message) {
   });
 }
 
+function sendMessage2(senderId, message) {
+  request({
+    url: 'https://graph.facebook.com/v2.6/me?messages',
+    qs: {
+      access_token: PAGE_ACCESS_TOKEN,
+    },
+    method: 'POST',
+    json: {
+      recipient: {
+        id: senderId
+      },
+      message: {
+        text: message
+      },
+    }
+  });
+}
+  
 function calc(command) {
   var chars = command.trim().split(/[\s,]+/g)
     var results = ''
