@@ -49,8 +49,8 @@ app.post('/webhook', function (req, res) {
       var senderId = message.sender.id;
       if (message.message) {
         if (message.message.text) {
-          //var text = calc(message.message.text);
-          sendMessage2(senderId, message.message.text);
+          var text = calc(message.message.text);
+          sendMessage(senderId, message.message.text);
         //}
       }
     }
@@ -61,25 +61,7 @@ app.post('/webhook', function (req, res) {
 
 function sendMessage(senderId, message) {
   request({
-    url: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: {
-      access_token: PAGE_ACCESS_TOKEN,
-    },
-    method: 'POST',
-    json: {
-      recipient: {
-        id: senderId
-      },
-      message: {
-        text: message
-      },
-    }
-  });
-}
-
-function sendMessage2(senderId, message) {
-  request({
-    url: 'https://graph.facebook.com/v2.6/me?messages',
+    url: 'https://graph.facebook.com/v3.3/me/messages',
     qs: {
       access_token: PAGE_ACCESS_TOKEN,
     },
