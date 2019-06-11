@@ -49,8 +49,8 @@ app.post('/webhook', function (req, res) {
       var senderId = message.sender.id;
       if (message.message) {
         if (message.message.text) {
-          var text = calc(message.message.text);
-          sendMessage2(senderId, text);
+          //var text = calc(message.message.text);
+          sendMessage2(senderId, message.message.text);
         //}
       }
     }
