@@ -49,7 +49,7 @@ app.post('/webhook', function (req, res) {
       var senderId = message.sender.id;
       if (message.message) {
         if (message.message.text) {
-          var text = calc(message.message.text);
+          //var text = calc(message.message.text);
           sendMessage(senderId, text);
         }
       }
