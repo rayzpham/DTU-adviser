@@ -50,8 +50,8 @@ app.post('/webhook', function (req, res) {
       if (message.message) {
         if (message.message.text) {
           var text = calc(message.message.text);
-          sendMessage(senderId, message.message.text);
-        //}
+          sendMessage(senderId, text);
+        }
       }
     }
   }
@@ -76,7 +76,7 @@ function sendMessage(senderId, message) {
     }
   });
 }
-  
+
 function calc(command) {
   var chars = command.trim().split(/[\s,]+/g)
     var results = ''
