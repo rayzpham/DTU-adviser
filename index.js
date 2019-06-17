@@ -82,12 +82,7 @@ function calc(command) {
     var results = ''
     var _ad1 = chars[0]
     var _ad1_ip = _ad1.split("/")[0]
-    if (chars.length == 1 && yml[chars[0]] != null) {
-        results += yml[chars[0]]
-        return results;
-    }
-    else {
-        results += yml.invalidIp
-    }
+    results += yml.invalidIp
+   
     return results
 }
