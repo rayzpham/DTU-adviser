@@ -82,10 +82,6 @@ function calc(command) {
     var results = ''
     var _ad1 = chars[0]
     var _ad1_ip = _ad1.split("/")[0]
-    if(yml.error == yml[chars[0]]){
-      results += yml.error
-      return results
-    }
-    else results += yml[chars[0]]
+    results += yml[chars[0]]
     return results
 }
