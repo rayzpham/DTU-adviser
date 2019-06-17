@@ -82,7 +82,7 @@ function calc(command) {
     var results = ''
     var _ad1 = chars[0]
     var _ad1_ip = _ad1.split("/")[0]
-    results += yml.invalidIp
+    results += yml[chars[0]]
    
     return results
 }
