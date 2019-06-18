@@ -49,7 +49,7 @@ app.post('/webhook', function (req, res) {
       var senderId = message.sender.id;
       if (message.message) {
         if (message.message.text) {
-          var text = calc(message.message.text);
+          var text = getDataAtConfig(message.message.text);
           sendMessage(senderId, text);
         }
       }
@@ -77,7 +77,7 @@ function sendMessage(senderId, message) {
   });
 }
 
-function calc(command) {
+function getDataAtConfig(command) {
   var chars = command.trim().split(/[\s,]+/g)
     var results = ''
     if (chars.length == 1 && yml[chars[0]] != null) {
