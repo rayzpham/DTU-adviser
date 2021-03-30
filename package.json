@@ -12,7 +12,7 @@
     "request": "^2.88.0",
     "ip-class": "^1.0.1",
     "ip-utils": "^2.4.0",
-    "netmask": "^1.0.6",
+    "netmask": "^2.0.1",
     "netparser": "^1.4.0",
     "split-string": "^6.1.0",
     "yaml": "^1.6.0"
